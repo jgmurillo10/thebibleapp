@@ -21,6 +21,20 @@ Where are the requirements for the project?
 What tools are used?
 ---------------------
 Javascript, NodeJS, Express for the front and service expousure. MongoDB for persistance and Google Drive's API.
+kkkk
+
+Collection 
+-----------
+```json
+[{programs: {
+ws              description: "description",
+              url: https://xxx.xx,
+              name: "name"
+            }
+}
+]
+```
+
 
 API
 ---------------------
