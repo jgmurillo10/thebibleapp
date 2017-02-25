@@ -21,6 +21,41 @@ Where are the requirements for the project?
 What tools are used?
 ---------------------
 Javascript, NodeJS, Express for the front and service expousure. MongoDB for persistance and Google Drive's API.
+kkkk
+
+Collection 
+-----------
+```json
+[
+      {
+    
+              "program_id": 4,
+              "description": "description",
+              "url": "https://xxx.xx",
+              "name": "name",
+              "courses": {
+                          "name": "name",
+                          "code": "ISIS2103",
+                          "course_id": 5764,
+                          "description": "description",
+                          "url":"https://xxx.xx",
+                          "files": {
+                                      "name": "name",
+                                      "size": 588.743,
+                                      "type": "pdf"
+                                    },
+                           "resources": {
+                                          "name":"name",
+                                          "description": "description",
+                                          "url":"https://xxx.xx"
+                                        }
+                          
+                        
+                           }
+    }
+]
+```
+
 
 API
 ---------------------
