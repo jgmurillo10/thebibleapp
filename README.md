@@ -51,33 +51,7 @@ Collection
                                         }
                           
                         
-            }
-    },
-    {
-    
-              "program_id": 4,
-              "description": "description",
-              "url": "https://xxx.xx",
-              "name": "name",
-              "courses": {
-                          "name": "name",
-                          "code": "ISIS2103",
-                          "course_id": 5764,
-                          "description": "description",
-                          "url":"https://xxx.xx",
-                          "files": {
-                                      "name": "name",
-                                      "size": 588.743,
-                                      "type": "pdf"
-                                    },
-                           "resources": {
-                                          "name":"name",
-                                          "description": "description",
-                                          "url":"https://xxx.xx"
-                                        }
-                          
-                        
-            }
+                           }
     }
 ]
 ```
