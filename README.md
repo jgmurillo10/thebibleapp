@@ -30,19 +30,19 @@ Collection
   {
     "programs": 
             {
-              "program_id": id,
+              "program_id": 4,
               "description": "description",
               "url": "https://xxx.xx",
               "name": "name",
               "courses": {
                           "name": "name",
-                          "code": code,
-                          "course_id": id,
+                          "code": "ISIS2103",
+                          "course_id": 5764,
                           "description": "description",
                           "url":"https://xxx.xx",
                           "files": {
                                       "name": "name",
-                                      "size": size,
+                                      "size": 588.743,
                                       "type": "pdf"
                                     },
                            "resources": {
