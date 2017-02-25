@@ -26,12 +26,34 @@ kkkk
 Collection 
 -----------
 ```json
-[{programs: {
-ws              description: "description",
-              url: https://xxx.xx,
-              name: "name"
+[
+  {
+    "programs": 
+            {
+              "program_id": id,
+              "description": "description",
+              "url": "https://xxx.xx",
+              "name": "name",
+              "courses": {
+                          "name": "name",
+                          "code": code,
+                          "course_id": id,
+                          "description": "description",
+                          "url":"https://xxx.xx",
+                          "files": {
+                                      "name": "name",
+                                      "size": size,
+                                      "type": "pdf"
+                                    },
+                           "resources": {
+                                          "name":"name",
+                                          "description": "description",
+                                          "url":"https://xxx.xx"
+                                        }
+                          
+                        }
             }
-}
+  }
 ]
 ```
 
