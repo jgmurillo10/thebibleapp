@@ -1,12 +1,12 @@
+'use strict';
 var express = require('express');
-
 var router = express.Router();
 var Program = require('./../../models/program');
 var Course = require('./../../models/course');
 var File = require('./../../models/file');
 var Resource = require('./../../models/resource')
 var mongoose = require('mongoose');
-// on routes that end in /regions
+// on routes that end in /programs
 // ----------------------------------------------------
 router.route('/')
 

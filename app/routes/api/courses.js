@@ -1,5 +1,27 @@
+'use strict';
 var express = require('express');
 var router = express.Router();
-var MongoClient = require('mongodb').MongoClient, assert = require('assert');
-//URI de mongo user:admin pass:thebible
-var url = 'mongodb://admin:thebible@ds161109.mlab.com:61109/thebibledb';
+var Course = require('./../../models/course');
+var File = require('./../../models/file');
+var Resource = require('./../../models/resource')
+var mongoose = require('mongoose');
+
+// on routes that end in /courses
+// ----------------------------------------------------
+
+router.route('/')
+
+  // get all programs
+  .get(function(req, res) {
+    var query = Course.find();
+      // query.select('program_id description url name');
+      query.exec(function(err, programs){
+        if(err) res.send(err);
+        res.json(programs);
+      })
+     
+     
+  })
+
+
+module.exports = router;

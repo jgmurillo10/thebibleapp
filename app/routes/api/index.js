@@ -1,3 +1,4 @@
+'use strict';
 var express = require('express');
 // var jwt     = require('jsonwebtoken');
 var config  = require('../../../config');
@@ -16,8 +17,8 @@ apiRouter.get('/', function(req, res) {
 
 // set subroutes on the other files
 apiRouter.use('/programs', require('./programs'));
-// apiRouter.use('/courses', require('./courses'));
-// apiRouter.use('/files', require('./files'));
-// apiRouter.use('/resources', require('./resources'));
+apiRouter.use('/courses', require('./courses'));
+apiRouter.use('/files', require('./files'));
+apiRouter.use('/resources', require('./resources'));
 
 module.exports = apiRouter;
