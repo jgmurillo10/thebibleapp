@@ -51,13 +51,13 @@ apiRoutes.get('/', function(req,res){
 })
 // REGISTER OUR ROUTES
 //All of our routes will be prefixed with /api
-app.use('/', apiRoutes);
+app.use('/api', apiRoutes);
 
 
 // START THE SERVER
 // ==============================================
 
-app.listen(config.port);
-console.log('Magic happens on port: '+ config.port);
+// app.listen(config.port);
+// console.log('Magic happens on port: '+ config.port);
 
 module.exports = app;
