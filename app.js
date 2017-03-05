@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 });
 
 
-// log all requests to the console 
+// log all requests to the console
 app.use(logger('dev'));
 // set static files location
 // used for requests that our frontend will make
@@ -51,7 +51,7 @@ apiRoutes.get('/', function(req,res){
 })
 // REGISTER OUR ROUTES
 //All of our routes will be prefixed with /api
-app.use('/api', apiRoutes);
+app.use('/', apiRoutes);
 
 
 // START THE SERVER
