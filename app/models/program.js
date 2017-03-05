@@ -1,15 +1,13 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://admin:thebible@ds161109.mlab.com:61109/thebibledb');
-var Schema = mongoose.Schema;
+'use strict';
+var mongoose= require('./../../db');
+var Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 
 //program schema
 var ProgramSchema = new Schema({ 
 			url: {type: String, unique: false, required:true}, 
-			program_id: {type: Number, unique: true, required:true}, 
-			_id: Number,
+			_id: {type: ObjectId, unique:true},
 			description: {type: String, unique: true, required:true},
-			name: {type: String, unique: true, required:true},
-			courses: {required:false}
+			name: {type: String, unique: true, required:true}
 		}, 
            
          { collection : 'programs' });

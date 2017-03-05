@@ -1,4 +1,4 @@
 module.exports = {
-  'port': process.env.PORT || 8080,
-  'url' : 'mongodb://admin:thebible@ds161109.mlab.com:61109/thebibledb'
+  'port': process.env.PORT || 3000,
+  'url' : 'mongodb://admin:thebible@ds161059.mlab.com:61059/thebible'
 };
