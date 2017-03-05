@@ -60,6 +60,7 @@ app.use('/api', apiRoutes);
 app.get('/account', (req, res) => res.render('account.html'));
 
 app.get('/sign-s3', (req, res) => {
+	console.log('sign-s3');
   const s3 = new aws.S3();
   const fileName = req.query['file-name'];
   const fileType = req.query['file-type'];
@@ -70,6 +71,7 @@ app.get('/sign-s3', (req, res) => {
     ContentType: fileType,
     ACL: 'public-read'
   };
+  console.log('sign-s3');
 
   s3.getSignedUrl('putObject', s3Params, (err, data) => {
     if(err){
@@ -80,11 +82,18 @@ app.get('/sign-s3', (req, res) => {
       signedRequest: data,
       url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}`
     };
+    console.log('data');
+    console.log(returnData, 'data');
+    console.log('after data');
     res.write(JSON.stringify(returnData));
     res.end();
   });
 });
 
+app.post('/save-details', (req, res) => {
+	// console.log(req.data);
+  // TODO: Read POSTed form data and do something useful
+});
 
 // START THE SERVER
 // ==============================================
