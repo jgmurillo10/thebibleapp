@@ -20,5 +20,7 @@ apiRouter.use('/programs', require('./programs'));
 apiRouter.use('/courses', require('./courses'));
 apiRouter.use('/files', require('./files'));
 apiRouter.use('/resources', require('./resources'));
+apiRouter.use('/upload', require('./upload'));
+
 
 module.exports = apiRouter;

@@ -1,0 +1,4 @@
+{ signedRequest: 'https://thebibleapp.s3.amazonaws.com/UNIANDES.oxps?AWSAccessKe
+yId=AKIAIH3PRYUTJU7BPZBA&Content-Type=&Expires=1488738361&Signature=RFAZQaOZ%2Bb
+Dib7GyeKgnX4485J0%3D&x-amz-acl=public-read',
+  url: 'https://thebibleapp.s3.amazonaws.com/UNIANDES.oxps' }
