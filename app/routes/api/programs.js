@@ -5,6 +5,7 @@ var Program = require('./../../models/program');
 var Course = require('./../../models/course');
 var File = require('./../../models/file');
 var Resource = require('./../../models/resource')
+var mongoose = require('mongoose');
 // on routes that end in /regions
 // ----------------------------------------------------
 router.route('/')
@@ -24,21 +25,21 @@ router.route('/')
   // create new program
   .post(function (req,res) {
     var program = new Program();
-    program.program_id=req.body.program_id;
+    program._id= mongoose.Types.ObjectId();
     program.description=req.body.description;
     program.url = req.body.url;
     program.name= req.body.name;
     
-    program.save(function(err){
-      if(err){
-        if(err.code == 11000){
-          return res.json({success: false, message: 'A program with that id already exists. '});
-        }
-        else
-          return res.json(err);
-      }
-      res.json({message: 'Program created! '});
-    })
+    program.save(function(err) {
+            if (err){
+              //duplicate etry
+              if(err.code == 11000)
+                return res.json({success: false, message:'A program with that name or description already exists'});
+              else
+                return res.send(err);
+            }
+            res.json({ message: 'Program created!' });
+        });
   })
   // delete a program
   
