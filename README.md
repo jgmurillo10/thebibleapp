@@ -12,7 +12,7 @@ Backend: https://github.com/jgmurillo10/thebibleapp
 
 ## Synopsis
 
-This project is an web application designed for storage academic data organized by program and course at Universidad de los Andes
+This project is a web application designed to storage academic files. The files are organized by program and course from Universidad de los Andes.
 
 ## Motivation
 

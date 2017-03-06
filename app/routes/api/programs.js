@@ -123,6 +123,21 @@ router.route('/:program_id')
             res.json(courses);
           })
   })
+  router.route('/:program_id/courses/:course_id/files/:file_id')
+  .get(function(req,res){
+    var query = File.find({_id: req.params.file_id});
+           query.exec(function(err, courses){
+            if(err) res.send(err);
+            res.json(courses);
+          })
+  })
+  .delete(function(req,res){
+    var query = File.find({_id: req.params.file_id}).remove();
+    query.exec(function (err,program) {
+      if(err) res.send(err);
+      res.json(program);
+    })
+  })
   router.route('/:program_id/courses/:course_id/resources')
 
   .get(function(req, res) {
