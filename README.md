@@ -1,7 +1,8 @@
 # thebibleapp
 
 
-
+Frontend: https://github.com/miarevalo10/thebiblefront
+Backend: https://thebibleapp.herokuapp.com/api
 
 version: 1.0
 
@@ -67,7 +68,9 @@ API
 |HTTP Method   |  URI |  description |
 |---|---|---|
 | GET | /api/programs  | Get all the programs  |
+| POST | /api/programs  | Post a program  |
 | GET | /api/programs/:program_id | Get specific program by id  |
+| DELETE | /api/programs/:program_id | Delete specific program by id  |
 
 
 ##Courses
@@ -75,17 +78,16 @@ API
 |HTTP Method   |  URI |  description |
 |---|---|---|
 | GET | /api/programs/:program_id/courses  |  Get all the courses by program |
-| GET |  /api/programs/:program_id/courses/:course_id  | Get an specific Semester by ID  |
+| POST | /api/programs/:program_id/courses  |  Post course by program |
+| GET |  /api/programs/:program_id/courses/:course_id  | Get an specific course by ID  |
+| DELETE |  /api/programs/:program_id/courses/:course_id  | Delete an specific course by ID  |
 
 ##Files
 
 |HTTP Method   |  URI |  description |
 |---|---|---|
 | GET |/api/programs/:program_id/courses/:course_id/files  |  Get all the files |
-| GET |/api/programs/:program_id/courses/:course_id/files/:file_id    | Get an specific File  |
-| POST  |/api/programs/:program_id/courses/:course_id/files    |  Add an specific file |
-| PUT  |/api/programs/:program_id/courses/:course_id/files/file:id   |  Update an specific file by ID|
-| DELETE  |/api/programs/:program_id/courses/:course_id/files/file:id   |  Delete an specific file by ID |
+| POST  |/api/upload    |  Add an specific file |
 
 ##Resources
 
@@ -93,7 +95,4 @@ API
 |HTTP Method   |  URI |  description |
 |---|---|---|
 | GET |/api/programs/:program_id/courses/:course_id/resources/  |  Get all the resources |
-| GET |/api/programs/:program_id/courses/:course_id/resources/:resource_id    | Get an specific resource  |
-| POST  |/api/programs/:program_id/courses/:course_id/resources    |  Add an specific resource |
-| PUT  |/api/programs/:program_id/courses/:course_id/resources/resource:id   |  Update an specific resource by ID|
-| DELETE  |/api/programs/:program_id/courses/:course_id/resources/resource:id   |  Delete an specific resource by ID |
+| POST |/api/programs/:program_id/courses/:course_id/resources/    | Get an specific resource  |
