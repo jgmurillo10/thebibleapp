@@ -155,6 +155,14 @@ router.route('/:program_id')
         });
   })
   
+  router.route('/:program_id/courses/:course_id/resources/:resource_id')
+  .get(function (req,res) {
+    var query = Resource.find({course_id: req.params.resource_id});
+        query.exec(function(err,resources){
+          if(err) res.send(err);
+          res.json(resources);
+        })
+  })
 
 
 
