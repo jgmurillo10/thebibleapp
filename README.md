@@ -1,10 +1,15 @@
 # thebibleapp
 
-
-Frontend: https://github.com/miarevalo10/thebiblefront <br>
+##Deploy URL's
+Frontend: https://thebiblefront.herokuapp.com <br>
 Backend: https://thebibleapp.herokuapp.com/api
 
-version: 1.0
+##GitHub URL's
+Frontend: https://github.com/miarevalo10/thebiblefront <br>
+Backend: https://github.com/jgmurillo10/thebibleapp
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
 
 ## Synopsis
 
@@ -16,17 +21,47 @@ A short description of the motivation behind the creation and maintenance of the
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+Windows:
+
+```sh
+git clone https://github.com/jgmurillo10/thebibleapp
+cd thebibleapp
+npm install
+npm start
+cd ../
+git clone http://github.com/miarevalo10/thebiblefront
+cd thebiblefront
+npm install
+npm start
+```
+runs at port 8080
 
 
 
+## Tools
+<br>
+JavaScript<br>
+NodeJS <br>
+Express<br>
+Amazon S3<br>
+MongoDB<br>
 
-What tools are used?
----------------------
-Javascript, NodeJS, Express for the front and service expousure. MongoDB for persistance and Google Drive's API.
-kkkk
+## npm Packages
+<br>
+aws-sdk<br>
+body-parser<br>
+cookie-parser<br>
+debug<br>
+express<br>
+mongodb<br>
+mongoose<br>
+morgan<br>
+nodemon<br>
+
 
 ## MongoDB Reference
+
+### Programs' collection
 ```json
 [
       {
@@ -57,6 +92,9 @@ kkkk
     }
 ]
 ```
+### Courses' collection
+### Files' collection
+### Resources' collection
 
 ## API Reference
 
