@@ -58,8 +58,8 @@ apiRoutes.get('/', function(req,res){
 app.use('/api', apiRoutes);
 
 app.use('/api/s3', require('react-dropzone-s3-uploader/s3router')({
-    bucket: 'MyS3Bucket',
-    region: 'us-east-1', //optional 
+    bucket: 'thebibleapp',
+    region: 'us-east-2', //optional 
     headers: {'Access-Control-Allow-Origin': '*'}, // optional 
     ACL: 'private' // this is default 
 }));
