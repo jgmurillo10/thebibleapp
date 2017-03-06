@@ -28,7 +28,7 @@ router.route('/')
     size=size/1024000;
     size=size+ ' MB';
     file.size = size;
-    console.log(file.name, file.drive_url);
+    console.log(file.name, file.drive_url, file._id, file.course_id, file.size);
     
     file.save(function(err) {
             if (err){
