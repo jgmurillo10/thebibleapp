@@ -9,15 +9,14 @@ Frontend: https://github.com/miarevalo10/thebiblefront <br>
 Backend: https://github.com/jgmurillo10/thebibleapp
 
 [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
 
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+This project is an web application designed for storage academic data organized by program and course at Universidad de los Andes
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+The main motivation of this web app is to centralize files from diferent program and courses.
 
 ## Installation
 
