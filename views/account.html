@@ -1,30 +1,28 @@
 <html>
   <body>
 
-    <h1>Edit your account</h1>
+    <h1>Add new files</h1>
 
     <hr>
 
-    <h2>Your avatar</h2>
+    <h2>Your file</h2>
 
     <input type="file" id="file-input">
     <p id="status">Please select a file</p>
-    <img style="border:1px solid gray;width:300px;"  id="preview" src="/images/default.png">
-
-    <h2>Your information</h2>
-
     <form method="POST" action="/api/upload">
-      <input type="hidden" id="avatar-url" name="avatar-url" value="/images/default.png">
-      <input type="text" name="username" placeholder="Username"><br>
-      <input type="text" name="fullname" placeholder="Full name">
+      <!-- <input type="hidden" id="avatar-url" name="avatar-url" value="/images/default.png"> -->
+     <!--  <input type="text" name="username" placeholder="Username"><br>
+      <input type="text" name="fullname" placeholder="Full name"> -->
       <input id="fileurl" type="hidden" name="fileurl" value="">
       <input id="name" type="hidden" name="name" value="">
+      <input id="courseid" type="hidden" name="courseid" value="">
+      <input id="filesize" type="hidden" name="filesize" value="">
       <br><br>
 
       <hr>
       <h2>Save changes</h2>
 
-      <input type="submit" value="Update profile">
+      <input type="submit" value="Update file">
     </form>
 
 
@@ -63,7 +61,8 @@
             const response = JSON.parse(xhr.responseText);
             uploadFile(file, response.signedRequest, response.url);
             document.getElementById('fileurl').value = response.url;
-            console.log(response.url, 'URRRLLLL');
+            document.getElementById('courseid').value = '58bb8170af26e205d10464e4';
+            
           }
           else{
             alert('Could not get signed URL.');
@@ -80,6 +79,7 @@
       const files = document.getElementById('file-input').files;
       const file = files[0];
       document.getElementById('name').value= file.name;
+      document.getElementById('filesize').value =file.size;
       if(file == null){
         return alert('No file selected.');
       }

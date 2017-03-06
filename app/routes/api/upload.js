@@ -18,14 +18,36 @@ router.route('/')
      
      
   })
-  .post(function(req, res){
-  	// res.json(req.params.url);
-  	console.log(req.body.username);
-  	console.log(req.body.fullname);
-  	console.log(req.body.fileurl);
-  	console.log(req.body.name);
-  	res.json({'ome':'gonorrea'});
-
+  .post(function (req,res) {
+    var file = new File();
+    file._id= mongoose.Types.ObjectId();
+    file.drive_url = req.body.fileurl;
+    file.name= req.body.name;
+    file.course_id = mongoose.Types.ObjectId(req.body.courseid);
+    var size=req.body.filesize;
+    size=size/1024000;
+    size=size+ ' MB';
+    file.size = size;
+    
+    file.save(function(err) {
+            if (err){
+              //duplicate etry
+              if(err.code == 11000)
+                return res.json({success: false, message:'A file with that name or description already exists'});
+              else
+                return res.send(err);
+            }
+            res.json({ message: 'File created!' });
+        });
   })
+  // .post(function(req, res){
+
+  // 	console.log(req.body.username);
+  // 	console.log(req.body.fullname);
+  // 	console.log(req.body.courseid);
+  // 	res.json({'ome':'gonorrea'});
+
+
+  // })
 
 module.exports = router;
