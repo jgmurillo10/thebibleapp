@@ -64,37 +64,52 @@ nodemon<br>
 ### Programs' collection
 ```json
 [
-      {
-    
-              "program_id": 4,
-              "description": "description",
-              "url": "https://xxx.xx",
-              "name": "name",
-              "courses": {
-                          "name": "name",
-                          "code": "ISIS2103",
-                          "course_id": 5764,
-                          "description": "description",
-                          "url":"https://xxx.xx",
-                          "files": {
-                                      "name": "name",
-                                      "size": 588.743,
-                                      "type": "pdf"
-                                    },
-                           "resources": {
-                                          "name":"name",
-                                          "description": "description",
-                                          "url":"https://xxx.xx"
-                                        }
-                          
-                        
-                           }
-    }
+   {
+    "_id" : ObjectId("58b26301f36d281facb55fd6"),
+    "description" : "description",
+    "url" : "http://sistemas.uniandes.edu.co",
+    "name" : "Ingeniería de Sistemas y Computación"
+}
 ]
 ```
 ### Courses' collection
+```json
+[
+  {
+    "_id" : ObjectId("58bb8170af26e205d10464e4"),
+    "name" : "Algoritmica y Programacion Orientada a Objetos I",
+    "code" : "ISIS1207",
+    "description" : "nfaisofaso",
+    "url" : "https://uniandes.edu.co",
+    "program_id" : ObjectId("58b26301f36d281facb55fd6")
+}
+]
+```
 ### Files' collection
+```json
+[
+{
+    "_id" : ObjectId("58bca72254b30c2f1c7919f0"),
+    "size" : "0.146759765625 MB",
+    "course_id" : ObjectId("58bb8170af26e205d10464e4"),
+    "name" : "GuiaDeTrabajo_n2_2014-2_honores.pdf",
+    "drive_url" : "https://thebibleapp.s3.amazonaws.com/GuiaDeTrabajo_n2_2014-2_honores.pdf",
+    "__v" : 0
+}
+]
+```
 ### Resources' collection
+```json
+[
+  {
+    "_id" : ObjectId("58bb85d2af26e205d10464ee"),
+    "course_id" : ObjectId("58bb8170af26e205d10464e4"),
+    "name" : "Tutorial Java",
+    "url" : "https://www.youtube.com/watch?v=coK4jM5wvko&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk",
+    "description" : "Curso Java desde cero por el canal pildorasinformaticas"
+}
+]
+```
 
 ## API Reference
 
@@ -134,30 +149,14 @@ nodemon<br>
 | GET |/api/programs/:program_id/courses/:course_id/resources/  |  Get all the resources |
 | POST |/api/programs/:program_id/courses/:course_id/resources/    | Get an specific resource  |
 
-## Contributors
+## Meta
 
+Juan Guillermo Murillo – [@juangmurillo2](https://twitter.com/juangmurillo2) – jg.murillo10@uniandes.edu.co
 
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
-## License
+[https://github.com/jgmurillo10/thebibleapp](https://github.com/jgmurillo10/)
 
-MIT License
-
-Copyright (c) 2017 Juan Guillermo Murillo Castillo
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
