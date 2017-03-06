@@ -64,7 +64,7 @@ app.use('/api', apiRoutes);
 //     ACL: 'private' // this is default 
 // }));
 
-// app.get('/account', (req, res) => res.render('account.html'));
+app.get('/account', (req, res) => res.render('account.html'));
 
 //AMAZON S3
 app.get('/sign-s3', (req, res) => {

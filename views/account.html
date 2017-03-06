@@ -59,6 +59,7 @@
         if(xhr.readyState === 4){
           if(xhr.status === 200){
             const response = JSON.parse(xhr.responseText);
+            console.log(response, '::::::::::::::::::::::: RESPONSE');
             uploadFile(file, response.signedRequest, response.url);
             //lo que hago aca es tomar la url del archivo pero de amazon, asi que esto se queda quieto
             document.getElementById('fileurl').value = response.url;
