@@ -98,6 +98,15 @@ router.route('/:program_id')
           res.json(resources);
         })
   })
+  router.route('/:program_id/courses/:course_id/resources/:resource_id')
+  .get(function (req,res) {
+    console.log(req.params.resource_id, '::::::::: RESOURCE_ID ')
+    var query = Resource.find({resource_id: req.params.resource_id});
+        query.exec(function(err,resources){
+          if(err) res.send(err);
+          res.json(resources);
+        })
+  })
 
 
 

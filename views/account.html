@@ -60,7 +60,9 @@
           if(xhr.status === 200){
             const response = JSON.parse(xhr.responseText);
             uploadFile(file, response.signedRequest, response.url);
+            //lo que hago aca es tomar la url del archivo pero de amazon, asi que esto se queda quieto
             document.getElementById('fileurl').value = response.url;
+            //aqui es donde debes mandar  el string de course id que pertenece al file
             document.getElementById('courseid').value = '58bb8170af26e205d10464e4';
             
           }
