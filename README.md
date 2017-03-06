@@ -151,6 +151,7 @@ nodemon<br>
 ## Meta
 
 Juan Guillermo Murillo – [@juangmurillo2](https://twitter.com/juangmurillo2) – jg.murillo10@uniandes.edu.co
+Maria Isabel Arevalo – [@miarevalo10](https://twitter.com/miarevalo10) – mi.arevalo10@uniandes.edu.co
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
