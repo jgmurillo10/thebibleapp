@@ -8,8 +8,8 @@ var ResourceSchema = new Schema({
 			_id: {type: ObjectId, unique:true},
 			description: {type: String, unique: false, required:true}, 
 			course_id: {type:ObjectId, unique: false, required:true},
-			url: {type: String, unique: true, required:true},
-			name: {type: String, unique: true, required:true}
+			url: {type: String, unique: false, required:true},
+			name: {type: String, unique: false, required:true}
 		}, 
            
          { collection : 'resources' });

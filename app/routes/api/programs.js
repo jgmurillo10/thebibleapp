@@ -41,7 +41,6 @@ router.route('/')
             res.json({ message: 'Program created!' });
         });
   })
-  // delete a program
   
 router.route('/:program_id')
 
@@ -54,6 +53,13 @@ router.route('/:program_id')
           res.json(programs);
         })
 
+  })
+  .delete(function (req,res) {
+    var query = Program.find({_id: req.params.program_id}).remove();
+    query.exec(function (err,program) {
+      if(err) res.send(err);
+      res.json(program);
+    })
   })
 
 
@@ -72,6 +78,27 @@ router.route('/:program_id')
             res.json(courses);
           })
   })
+  .post(function (req,res) {
+      var course = new Course();
+    course._id= mongoose.Types.ObjectId();
+    course.program_id= mongoose.Types.ObjectId(req.params.program_id);
+    course.description=req.body.description;
+    course.url = req.body.url;
+    course.name= req.body.name;
+    course.code= req.body.code;
+
+    course.save(function(err) {
+            if (err){
+              //duplicate etry
+              if(err.code == 11000)
+                return res.json({success: false, message:'A course with that name or description already exists'});
+              else
+                return res.send(err);
+            }
+            res.json({ message: 'Course created!' });
+        });
+  })
+
   router.route('/:program_id/courses/:course_id')
   .get(function(req,res){
        var query = Course.find({_id: req.params.course_id});
@@ -79,6 +106,13 @@ router.route('/:program_id')
             if(err) res.send(err);
             res.json(courses);
           })
+  })
+  .delete(function(req,res){
+    var query = Course.find({_id: req.params.course_id}).remove();
+    query.exec(function (err,program) {
+      if(err) res.send(err);
+      res.json(program);
+    })
   })
   router.route('/:program_id/courses/:course_id/files')
 
@@ -98,15 +132,29 @@ router.route('/:program_id')
           res.json(resources);
         })
   })
-  router.route('/:program_id/courses/:course_id/resources/:resource_id')
-  .get(function (req,res) {
-    console.log(req.params.resource_id, '::::::::: RESOURCE_ID ')
-    var query = Resource.find({resource_id: req.params.resource_id});
-        query.exec(function(err,resources){
-          if(err) res.send(err);
-          res.json(resources);
-        })
+  .post(function (req,res)  {
+      var resouce = new Resource();
+    resouce._id= mongoose.Types.ObjectId();
+    resouce.course_id= mongoose.Types.ObjectId(req.params.course_id);
+    resouce.description=req.body.description;
+    resouce.url = req.body.url;
+    resouce.name= req.body.name;
+    console.log(req.body.url);
+    console.log(req.body.name)
+    console.log(req.body.description)
+
+    resouce.save(function(err) {
+            if (err){
+              //duplicate etry
+              if(err.code == 11000)
+                return res.json({success: false, message:'A resource with that name or description already exists'});
+              else
+                return res.send(err);
+            }
+            res.json({ message: 'Resource created!' });
+        });
   })
+  
 
 
 
