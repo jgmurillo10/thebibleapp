@@ -44,9 +44,14 @@ app.use(express.static(path.join(__dirname, '/public')));
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 
+//Do not forget to clean-up code comments and unused routines
 
 // ROUTES FOR OUR API
 // ==============================================
+
+// Its a good idea to declare only the routes and the functions
+// that attend those requests, and implement and extract the
+// logic to more specialized modules.
 
 // API ROUTES -------------------------
 var apiRoutes = require('./app/routes/api');
