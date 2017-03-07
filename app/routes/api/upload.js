@@ -46,6 +46,7 @@ router.route('/')
   // 	console.log(req.body.username);
   // 	console.log(req.body.fullname);
   // 	console.log(req.body.courseid);
+// Seria bueno limpiar el código que ya no esten utilizando y no dejarlo comentado para mayor organizacion y entendimiento del codigo
   // 	res.json({'ome':'gonorrea'});
 
 
