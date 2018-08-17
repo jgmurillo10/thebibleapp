@@ -1,10 +1,10 @@
 # thebibleapp
 
-##Deploy URL's
+## Deploy URL's
 Frontend: https://thebiblefront.herokuapp.com <br>
 Backend: https://thebibleapp.herokuapp.com/api
 
-##GitHub URL's
+## GitHub URL's
 Frontend: https://github.com/miarevalo10/thebiblefront <br>
 Backend: https://github.com/jgmurillo10/thebibleapp
 
@@ -114,7 +114,7 @@ nodemon<br>
 
 
 
-##Programs
+## Programs
 
 |HTTP Method   |  URI |  description |
 |---|---|---|
@@ -124,7 +124,7 @@ nodemon<br>
 | DELETE | /api/programs/:program_id | Delete specific program by id  |
 
 
-##Courses
+## Courses
 
 |HTTP Method   |  URI |  description |
 |---|---|---|
@@ -133,14 +133,14 @@ nodemon<br>
 | GET |  /api/programs/:program_id/courses/:course_id  | Get an specific course by ID  |
 | DELETE |  /api/programs/:program_id/courses/:course_id  | Delete an specific course by ID  |
 
-##Files
+## Files
 
 |HTTP Method   |  URI |  description |
 |---|---|---|
 | GET |/api/programs/:program_id/courses/:course_id/files  |  Get all the files |
 | POST  |/api/upload    |  Add an specific file |
 
-##Resources
+## Resources
 
 
 |HTTP Method   |  URI |  description |
