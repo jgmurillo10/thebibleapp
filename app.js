@@ -1,3 +1,4 @@
+// Muy chévere la aplicación. Podrían darle mensajes más amigables al usuario cuando realiza una operación (sin alerts) y comunicarle más al usuario qué está pasando, informarle cuando se agrega algo exitosamente o no. Muy interesante.
 // BASE SETUP
 // ================================================
 'use strict';
